@@ -28,16 +28,72 @@ resource "azurerm_storage_account" "storage" {
   public_network_access_enabled   = false
 }
 
-resource "azurerm_storage_container" "storage" {
-  name                  = var.blob_storage_name
+resource "azurerm_storage_container" "storage_dgv" {
+  name                  = var.blob_storage_dgv_name
   storage_account_name  = azurerm_storage_account.storage.name
   container_access_type = "blob"
 }
 
-resource "azurerm_storage_blob" "blobstorage" {
+resource "azurerm_storage_blob" "blobstorage_dgv" {
   name                   = "Blob"
   storage_account_name   = azurerm_storage_account.storage.name
-  storage_container_name = azurerm_storage_container.storage.name
+  storage_container_name = azurerm_storage_container.storage_dgv.name
+  type                   = "Block"
+  # source                 = "some-local-file.zip"
+}
+
+resource "azurerm_storage_container" "storage_fscdinv" {
+  name                  = var.blob_storage_fscdinv_name
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "blob"
+}
+
+resource "azurerm_storage_blob" "blobstorage_fscdinv" {
+  name                   = "Blob"
+  storage_account_name   = azurerm_storage_account.storage.name
+  storage_container_name = azurerm_storage_container.storage_fscdinv.name
+  type                   = "Block"
+  # source                 = "some-local-file.zip"
+}
+
+resource "azurerm_storage_container" "storage_fcsdbp" {
+  name                  = var.blob_storage_fcsdbp_name
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "blob"
+}
+
+resource "azurerm_storage_blob" "blobstorage_fcsdbp" {
+  name                   = "Blob"
+  storage_account_name   = azurerm_storage_account.storage.name
+  storage_container_name = azurerm_storage_container.storage_fcsdbp.name
+  type                   = "Block"
+  # source                 = "some-local-file.zip"
+}
+
+resource "azurerm_storage_container" "storage_myz" {
+  name                  = var.blob_storage_myz_name
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "blob"
+}
+
+resource "azurerm_storage_blob" "blobstorage_myz" {
+  name                   = "Blob"
+  storage_account_name   = azurerm_storage_account.storage.name
+  storage_container_name = azurerm_storage_container.storage_myz.name
+  type                   = "Block"
+  # source                 = "some-local-file.zip"
+}
+
+resource "azurerm_storage_container" "storage_rwb" {
+  name                  = var.blob_storage_rwb_name
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "blob"
+}
+
+resource "azurerm_storage_blob" "blobstorage_rwb" {
+  name                   = "Blob"
+  storage_account_name   = azurerm_storage_account.storage.name
+  storage_container_name = azurerm_storage_container.storage_rwb.name
   type                   = "Block"
   # source                 = "some-local-file.zip"
 }
@@ -73,4 +129,3 @@ resource "azurerm_storage_blob" "blobstorage" {
 #   ttl                 = 300
 #   records             = [azurerm_private_endpoint.endpoint_storage.private_service_connection.0.private_ip_address]
 # }
-
