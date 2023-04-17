@@ -34,7 +34,7 @@ network_security_group_name = "workbench-dev-neu-vnet-nsg1"
 
 resource_group_name  = "zgebs-workbench-dev-storage-rg"
 # location             = "north europe"
-storage_account_name = "zgbswbdevstorage1123"
+storage_account_name = "zgbswbdevstorage119802"
 
 # virtual_network_name = "workbench-dev-neu-vnet"
 
@@ -50,7 +50,11 @@ storage_account_name = "zgbswbdevstorage1123"
 
 # storage_private_service_connection = "service-connection-stg-001"
 
-
+blob_storage_dgv_name = "zgebs-wb-dev-dgv-publicftpblob023"
+blob_storage_fscdinv_name = "zgebs-wb-dev-fscdinv-publicftpblob023"
+blob_storage_fcsdbp_name = "zgebs-wb-dev-fcsdbp-publicftpblob023"
+blob_storage_myz_name = "zgebs-wb-dev-myz-publicftpblob023"
+blob_storage_rwb_name = "zgebs-wb-dev-rwb-publicftpblob023"
 
 #################################
 # storage containers
@@ -60,28 +64,28 @@ storage_account_name = "zgbswbdevstorage1123"
 # location             = "north europe"
 # storage_account_name = "zgbswbdevstorage1123"
 
-container_names = {
-    blob_container_1 = {
-        "container_name"          = "zgebs-wb-dev-dgv-publicftpblob0198"
-        "storage_account_name"     = "zgbswbdevstorage1123"
-    }
-    blob_container_2 = {
-        "container_name"          = "zgebs-wb-dev-fscdinv-publicftpblob0198"
-        "storage_account_name"     = "zgbswbdevstorage1123"
-    }
-    blob_container_3 = {
-        "container_name"          = "zgebs-wb-dev-fcsdbp-publicftpblob0198"
-        "storage_account_name"     = "zgbswbdevstorage1123"
-    }
-    blob_container_4 = {
-        "container_name"          = "zgebs-wb-dev-myz-publicftpblob0198"
-        "storage_account_name"     = "zgbswbdevstorage1123"
-    }
-    blob_container_5 = {
-        "container_name"          = "zgebs-wb-dev-rwb-publicftpblob0198"
-        "storage_account_name"     = "zgbswbdevstorage1123"
-    }
-}
+# container_names = {
+#     blob_container_1 = {
+#         "container_name"          = "zgebs-wb-dev-dgv-publicftpblob0198"
+#         "storage_account_name"     = "zgbswbdevstorage1123"
+#     }
+#     blob_container_2 = {
+#         "container_name"          = "zgebs-wb-dev-fscdinv-publicftpblob0198"
+#         "storage_account_name"     = "zgbswbdevstorage1123"
+#     }
+#     blob_container_3 = {
+#         "container_name"          = "zgebs-wb-dev-fcsdbp-publicftpblob0198"
+#         "storage_account_name"     = "zgbswbdevstorage1123"
+#     }
+#     blob_container_4 = {
+#         "container_name"          = "zgebs-wb-dev-myz-publicftpblob0198"
+#         "storage_account_name"     = "zgbswbdevstorage1123"
+#     }
+#     blob_container_5 = {
+#         "container_name"          = "zgebs-wb-dev-rwb-publicftpblob0198"
+#         "storage_account_name"     = "zgbswbdevstorage1123"
+#     }
+# }
 
 
 
@@ -225,7 +229,7 @@ resource_group_name_kv = "zgebs-workbench-dev-keyvault-rg"
 
 # location = "north europe"
 
-key_vault_name = "zgebs-wb-dev-shrdkv-1997"
+key_vault_name = "zgebs-wb-dev-shrdkv-1902"
 
 # kv_endpoint_name = "zgebs-wb-dev-shrdkv-pr-198"
 
