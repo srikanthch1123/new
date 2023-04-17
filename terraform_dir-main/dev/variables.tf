@@ -49,14 +49,17 @@ variable "storage_account_name" {}
 
 # variable "storage_private_service_connection" {}
 
-
-
+variable "blob_storage_dgv_name" {}
+variable "blob_storage_fscdinv_name" {}
+variable "blob_storage_fcsdbp_name" {}
+variable "blob_storage_myz_name" {}
+variable "blob_storage_rwb_name" {}
 
 # storage containers
 
-variable "container_names" {
-  type = any
-}
+# variable "container_names" {
+#   type = any
+# }
 
 
 
