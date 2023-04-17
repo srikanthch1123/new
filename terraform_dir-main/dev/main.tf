@@ -47,9 +47,14 @@ module "storage" {
   storage_account_name = var.storage_account_name
   location             = var.location
   resource_group_name  = var.resource_group_name
-  for_each = var.container_names
-  container_names = each.value["container_name"]
-  blob_storage_name = each.value["container_name"]
+  blob_storage_dgv_name = var.blob_storage_dgv_name
+  blob_storage_fscdinv_name = var.blob_storage_fscdinv_name
+  blob_storage_fcsdbp_name = var.blob_storage_fcsdbp_name
+  blob_storage_myz_name = var.blob_storage_myz_name
+  blob_storage_rwb_name = var.blob_storage_rwb_name
+  # for_each = var.container_names
+  # container_names = each.value["container_name"]
+  # blob_storage_name = each.value["container_name"]
 
 #   virtual_network_name = var.virtual_network_name
 #   resource_group_name_network = var.resource_group_name_network
@@ -169,4 +174,3 @@ module "app-insights" {
   application_insights_name = var.application_insights_name
   location = var.location
 }
-
